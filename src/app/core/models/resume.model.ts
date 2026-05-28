@@ -5,6 +5,7 @@ export interface ResumeProfile {
   email: string;
   phone: string;
   about: string;
+  resumePdf: string;
   links: {
     github: string;
     linkedin: string | null;

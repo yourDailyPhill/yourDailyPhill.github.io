@@ -28,8 +28,4 @@ export class ResumeComponent implements OnInit {
       path: '/resume',
     });
   }
-
-  print(): void {
-    window.print();
-  }
 }

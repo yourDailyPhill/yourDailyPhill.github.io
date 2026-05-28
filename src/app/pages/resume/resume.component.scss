@@ -1,5 +1,10 @@
 .resume-toolbar {
   margin-bottom: 1rem;
+
+  a.btn {
+    text-decoration: none;
+    display: inline-flex;
+  }
 }
 
 .resume-header {

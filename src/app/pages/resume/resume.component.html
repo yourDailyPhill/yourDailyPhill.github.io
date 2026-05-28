@@ -1,6 +1,13 @@
 @if (resume$ | async; as resume) {
   <div class="resume-toolbar no-print">
-    <button type="button" class="btn primary" (click)="print()">Print / Save PDF</button>
+    <a
+      class="btn primary"
+      [href]="resume.profile.resumePdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View PDF resume
+    </a>
   </div>
 
   <header class="resume-header">
