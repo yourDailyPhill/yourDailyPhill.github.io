@@ -1,0 +1,70 @@
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.post {
+  header {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1rem;
+  }
+
+  h1 {
+    margin: 0.35rem 0;
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    letter-spacing: -0.02em;
+  }
+
+  time,
+  .meta {
+    color: var(--text-muted);
+  }
+}
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+
+  li {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+  }
+}
+
+.content {
+  line-height: 1.7;
+  color: var(--text);
+
+  :deep(h2) {
+    margin-top: 1.75rem;
+  }
+
+  :deep(a) {
+    color: var(--accent);
+  }
+
+  :deep(code) {
+    background: var(--surface);
+    padding: 0.1rem 0.35rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+  }
+
+  :deep(pre) {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    overflow-x: auto;
+    border-radius: 0.5rem;
+  }
+}

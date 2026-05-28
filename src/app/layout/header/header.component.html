@@ -1,0 +1,16 @@
+<header class="site-header">
+  <a class="brand" routerLink="/">Phillip Raich</a>
+  <nav aria-label="Main">
+    @for (item of nav; track item.path) {
+      <a
+        [routerLink]="item.path"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: item.exact }"
+        >{{ item.label }}</a
+      >
+    }
+  </nav>
+  <button type="button" class="theme-toggle" (click)="theme.toggle()" [attr.aria-label]="theme.dark() ? 'Switch to light mode' : 'Switch to dark mode'">
+    {{ theme.dark() ? 'Light' : 'Dark' }}
+  </button>
+</header>

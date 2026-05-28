@@ -1,0 +1,45 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem 0 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-right: auto;
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: var(--text-muted);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.35rem;
+
+    &:hover,
+    &.active {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+  }
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  cursor: pointer;
+  font: inherit;
+}

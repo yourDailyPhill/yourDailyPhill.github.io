@@ -1,0 +1,27 @@
+<app-section-heading title="Blog" subtitle="Thoughts on engineering, reliability, and tools" />
+
+@if (posts$ | async; as posts) {
+  @if (posts.length === 0) {
+    <p class="muted">No posts yet. Add markdown files under <code>content/blog/</code>.</p>
+  } @else {
+    <div class="list">
+      @for (post of posts; track post.slug) {
+        <article class="post-card">
+          <time [attr.datetime]="post.date">{{ formatPostDate(post.date) }}</time>
+          <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt }}</p>
+          <div class="meta">
+            <span>{{ post.readMinutes }} min read</span>
+            @if (post.tags.length) {
+              <ul class="tags">
+                @for (tag of post.tags; track tag) {
+                  <li>{{ tag }}</li>
+                }
+              </ul>
+            }
+          </div>
+        </article>
+      }
+    </div>
+  }
+}

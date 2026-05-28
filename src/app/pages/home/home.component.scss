@@ -1,0 +1,81 @@
+.hero {
+  margin-bottom: 2.5rem;
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin: 0 0 0.5rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.03em;
+  }
+
+  .lead {
+    font-size: 1.1rem;
+    max-width: 42rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  .meta {
+    color: var(--text-muted);
+  }
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.highlights,
+.posts {
+  margin-bottom: 2.5rem;
+}
+
+.post-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+
+  h3 {
+    margin: 0.35rem 0;
+    font-size: 1.05rem;
+  }
+
+  time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    color: var(--text-muted);
+  }
+
+  a {
+    color: var(--accent);
+  }
+}
+
+.read-more {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,86 @@
+@if (resume$ | async; as resume) {
+  <div class="resume-toolbar no-print">
+    <button type="button" class="btn primary" (click)="print()">Print / Save PDF</button>
+  </div>
+
+  <header class="resume-header">
+    <h1>{{ resume.profile.name }}</h1>
+    <p class="title">{{ resume.profile.title }}</p>
+    <p class="contact-line">
+      {{ resume.profile.location }} ·
+      <a [href]="'mailto:' + resume.profile.email">{{ resume.profile.email }}</a> ·
+      {{ resume.profile.phone }} ·
+      <a [href]="resume.profile.links.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </p>
+    <p class="about">{{ resume.profile.about }}</p>
+  </header>
+
+  <div class="resume-layout">
+    <aside class="resume-nav no-print" aria-label="Resume sections">
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#volunteering">Volunteering</a>
+    </aside>
+
+    <div class="resume-body">
+      <section id="experience">
+        <app-section-heading title="Professional experience" />
+        @for (job of resume.experience; track job.company + job.role) {
+          <article class="timeline-item">
+            <div class="timeline-head">
+              <h3>{{ job.role }}, {{ job.company }}</h3>
+              <p class="muted">{{ job.location }} · {{ formatDateRange(job.start, job.end) }}</p>
+            </div>
+            <ul>
+              @for (item of job.highlights; track $index) {
+                <li>{{ item }}</li>
+              }
+            </ul>
+          </article>
+        }
+      </section>
+
+      <section id="education">
+        <app-section-heading title="Education" />
+        @for (edu of resume.education; track edu.school + edu.degree) {
+          <article class="timeline-item compact">
+            <h3>{{ edu.degree }}</h3>
+            <p class="muted">
+              {{ edu.school }} — {{ edu.location }}
+              @if (edu.date) {
+                · {{ formatMonthYear(edu.date) }}
+              }
+            </p>
+          </article>
+        }
+      </section>
+
+      <section id="skills">
+        <app-section-heading title="Skills" />
+        <div class="skills-grid">
+          @for (group of resume.skills; track group.category) {
+            <div>
+              <h3>{{ group.category }}</h3>
+              <ul class="tag-list">
+                @for (skill of group.items; track skill) {
+                  <li>{{ skill }}</li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      </section>
+
+      <section id="volunteering">
+        <app-section-heading title="Volunteering" />
+        @for (item of resume.volunteering; track item.organization) {
+          <article class="timeline-item compact">
+            <h3>{{ item.role }}, {{ item.organization }}</h3>
+            <p class="muted">{{ formatDateRange(item.start, item.end) }}</p>
+          </article>
+        }
+      </section>
+    </div>
+  </div>
+}

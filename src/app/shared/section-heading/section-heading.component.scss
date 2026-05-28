@@ -1,0 +1,14 @@
+.section-heading {
+  margin-bottom: 1.5rem;
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    margin: 0.35rem 0 0;
+    color: var(--text-muted);
+  }
+}

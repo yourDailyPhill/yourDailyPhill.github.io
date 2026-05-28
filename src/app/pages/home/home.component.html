@@ -1,0 +1,49 @@
+@if (resume$ | async; as resume) {
+  <section class="hero">
+    <p class="eyebrow">{{ resume.profile.title }}</p>
+    <h1>{{ resume.profile.name }}</h1>
+    <p class="lead">{{ resume.profile.about }}</p>
+    <p class="meta">{{ resume.profile.location }}</p>
+    <div class="hero-actions">
+      <a class="btn primary" routerLink="/resume">View resume</a>
+      <a class="btn" routerLink="/contact">Contact</a>
+      <a class="btn" href="https://github.com/yourDailyPhill" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <app-section-heading title="Recent experience" subtitle="Latest role at a glance" />
+    @if (resume.experience[0]; as job) {
+      <article class="card">
+        <h3>{{ job.role }} · {{ job.company }}</h3>
+        <p class="muted">{{ job.location }}</p>
+        <ul>
+          @for (item of job.highlights.slice(0, 3); track $index) {
+            <li>{{ item }}</li>
+          }
+        </ul>
+      </article>
+    }
+  </section>
+}
+
+<section class="posts">
+  <app-section-heading title="Latest posts" subtitle="Notes for recruiters and peers" />
+  @if (posts$ | async; as posts) {
+    @if (posts.length === 0) {
+      <p class="muted">No posts yet.</p>
+    } @else {
+      <div class="post-grid">
+        @for (post of posts; track post.slug) {
+          <article class="card">
+            <time [attr.datetime]="post.date">{{ formatPostDate(post.date) }}</time>
+            <h3><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+            <a class="read-more" [routerLink]="['/blog', post.slug]">Read more</a>
+          </article>
+        }
+      </div>
+    }
+    <a class="btn" routerLink="/blog">All posts</a>
+  }
+</section>

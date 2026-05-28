@@ -1,0 +1,25 @@
+<app-section-heading title="Contact" subtitle="Open to opportunities — reach out anytime" />
+
+@if (resume$ | async; as resume) {
+  <div class="contact-grid">
+    <a class="card" [href]="'mailto:' + resume.profile.email">
+      <h2>Email</h2>
+      <p>{{ resume.profile.email }}</p>
+    </a>
+    <a class="card" [href]="'tel:' + resume.profile.phone">
+      <h2>Phone</h2>
+      <p>{{ resume.profile.phone }}</p>
+    </a>
+    <a class="card" [href]="resume.profile.links.github" target="_blank" rel="noopener noreferrer">
+      <h2>GitHub</h2>
+      <p>{{ resume.profile.links.github }}</p>
+    </a>
+    @if (resume.profile.links.linkedin) {
+      <a class="card" [href]="resume.profile.links.linkedin" target="_blank" rel="noopener noreferrer">
+        <h2>LinkedIn</h2>
+        <p>View profile</p>
+      </a>
+    }
+  </div>
+  <p class="location muted">{{ resume.profile.location }}</p>
+}

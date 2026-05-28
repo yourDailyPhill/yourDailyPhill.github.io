@@ -1,0 +1,23 @@
+<a class="back" routerLink="/blog">← All posts</a>
+
+@if (post$ | async; as post) {
+  @if (post) {
+    <article class="post">
+      <header>
+        <time [attr.datetime]="post.date">{{ formatPostDate(post.date) }}</time>
+        <h1>{{ post.title }}</h1>
+        <p class="meta">{{ post.readMinutes }} min read</p>
+        @if (post.tags.length) {
+          <ul class="tags">
+            @for (tag of post.tags; track tag) {
+              <li>{{ tag }}</li>
+            }
+          </ul>
+        }
+      </header>
+      <div class="content" [innerHTML]="safeHtml(post.html)"></div>
+    </article>
+  } @else {
+    <p>Post not found.</p>
+  }
+}

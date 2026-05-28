@@ -1,0 +1,105 @@
+{
+  "profile": {
+    "name": "Phillip Raich",
+    "title": "Computer Engineer",
+    "location": "Austin, Texas",
+    "email": "phill.raich@pm.me",
+    "phone": "435-630-1389",
+    "about": "Computer engineer and software engineer with enterprise Java and Angular experience at General Motors, with a strong focus on quality, security, cloud deployment, and measurable reliability.",
+    "links": {
+      "github": "https://github.com/yourDailyPhill",
+      "linkedin": "https://www.linkedin.com/in/phillipraich/"
+    }
+  },
+  "experience": [
+    {
+      "role": "Software Engineer",
+      "company": "General Motors",
+      "location": "Austin, Texas",
+      "start": "2022-05",
+      "end": "2026-05",
+      "highlights": [
+        "Engineered and maintained five enterprise applications using Java backends and Angular frontends, utilized by thousands of users for critical request-to-pay processes.",
+        "Implemented comprehensive unit testing suites to achieve 95% or higher coverage. Instrumented Datadog for application metrics, achieving 100% yearly uptime over three years.",
+        "Created daily builds and scanning workflows to proactively identify security flaws. Regularly patched dependencies and refactored code to meet strict enterprise security standards.",
+        "Implemented SAP integrations through OData and Redis caching, improving application load times by 55%.",
+        "Deployed and managed containerized workloads across Kubernetes, Red Hat OpenShift, and Azure.",
+        "Developed automated GitHub Actions workflows for blue/green deployments with active/active regional redundancy for disaster recovery.",
+        "Experienced with AI tools such as Copilot, Glean, and Cursor to increase engineering throughput and PR turnaround."
+      ]
+    },
+    {
+      "role": "Automotive Technician",
+      "company": "Master AutoTech",
+      "location": "Salt Lake City, Utah",
+      "start": "2020-09",
+      "end": "2022-05",
+      "highlights": [
+        "Identified root causes of engine performance issues, warning lights, transmission concerns, suspension failures, and electrical malfunctions.",
+        "Performed repairs and component replacements on engines, brake systems, steering and suspension, HVAC, fuel systems, and electrical wiring to meet manufacturer specifications and safety standards."
+      ]
+    },
+    {
+      "role": "Retail Sales Manager",
+      "company": "O'Reilly Auto Parts",
+      "location": "Salt Lake City, Utah",
+      "start": "2013-06",
+      "end": "2020-09",
+      "highlights": [
+        "Managed daily store operations in the absence of management, including opening and closing procedures, cash handling, and shift supervision."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Computer Engineering",
+      "school": "University of Utah",
+      "location": "Salt Lake City, Utah",
+      "date": "2021-12"
+    },
+    {
+      "degree": "Associate of Science in General Studies",
+      "school": "Utah State University",
+      "location": "Logan, Utah",
+      "date": "2017-05"
+    },
+    {
+      "degree": "Associate of Applied Science in Automotive Technology",
+      "school": "Utah State University",
+      "location": "Logan, Utah",
+      "date": "2017-05"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Languages",
+      "items": ["Java", "TypeScript", "C", "C++"]
+    },
+    {
+      "category": "Platforms & ops",
+      "items": ["GitHub", "Kubernetes"]
+    },
+    {
+      "category": "Hardware & embedded",
+      "items": ["Embedded design", "Verilog", "Circuit design"]
+    },
+    {
+      "category": "Testing",
+      "items": ["Jest", "Jasmine", "JUnit", "Mockito", "BrowserStack"]
+    }
+  ],
+  "volunteering": [
+    {
+      "role": "Lead Audio Technician",
+      "organization": "Antioch Austin",
+      "start": "2022-05",
+      "end": null
+    },
+    {
+      "role": "Student Body President",
+      "organization": "USU Eastern",
+      "start": "2016-06",
+      "end": "2017-05"
+    }
+  ]
+}
