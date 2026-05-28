@@ -18,7 +18,7 @@
         <h3>{{ job.role }} · {{ job.company }}</h3>
         <p class="muted">{{ job.location }}</p>
         <ul>
-          @for (item of job.highlights.slice(0, 3); track $index) {
+          @for (item of job.highlights.slice(0, 7); track $index) {
             <li>{{ item }}</li>
           }
         </ul>

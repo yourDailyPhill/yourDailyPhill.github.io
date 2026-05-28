@@ -3,13 +3,13 @@
     "slug": "hello-world",
     "title": "Hello, World",
     "date": "2026-05-28T00:00:00.000Z",
-    "excerpt": "Kicking off a personal site for recruiters — resume, blog, and lessons from enterprise Angular work.",
+    "excerpt": "Kicking off a personal site for recruiters — resume, blog, and what's to come.",
     "tags": [
       "angular",
       "career"
     ],
     "body": "Welcome to my portfolio site.\r\n\r\nI'm **Phillip Raich**, a computer engineer based in Austin, Texas. This site is where I'll share notes on software engineering, reliability, and the tools I use day to day.\r\n\r\n## What to expect\r\n\r\n- Short posts on **Angular**, **Java**, and **cloud** topics from real project work\r\n- Occasional write-ups on **testing**, **observability**, and **CI/CD**\r\n- A living **resume** you can print or share with recruiters\r\n\r\nThanks for stopping by — feel free to reach out via the [contact page](/contact).",
-    "html": "<p>Welcome to my portfolio site.</p>\n<p>I&#39;m <strong>Phillip Raich</strong>, a computer engineer based in Austin, Texas. This site is where I&#39;ll share notes on software engineering, reliability, and the tools I use day to day.</p>\n<h2>What to expect</h2>\n<ul>\n<li>Short posts on <strong>Angular</strong>, <strong>Java</strong>, and <strong>cloud</strong> topics from real project work</li>\n<li>Occasional write-ups on <strong>testing</strong>, <strong>observability</strong>, and <strong>CI/CD</strong></li>\n<li>A living <strong>resume</strong> you can print or share with recruiters</li>\n</ul>\n<p>Thanks for stopping by — feel free to reach out via the <a href=\"/contact\">contact page</a>.</p>\n",
+    "html": "<p>Welcome to my portfolio site.</p>\n<p>I&#39;m <strong>Phillip Raich</strong>, a computer engineer based in Austin, Texas. This site is where I&#39;ll share notes on software engineering, reliability, and the tools I use day to day.</p>\n<h2>What to expect</h2>\n<ul>\n<li>Short posts on my take of the current job market, technology tremds, and things I'm just fastinated by.</li>\n<li>A living <strong>resume</strong> you can print or share with recruiters</li>\n</ul>\n<p>Thanks for stopping by — feel free to reach out via the <a href=\"/contact\">contact page</a>.</p>\n",
     "readMinutes": 1
   }
 ]
