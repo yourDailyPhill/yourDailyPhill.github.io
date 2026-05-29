@@ -8,7 +8,7 @@
       @for (post of posts; track post.slug) {
         <article class="post-card">
           <time [attr.datetime]="post.date">{{ formatPostDate(post.date) }}</time>
-          <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+          <h2><a class="btn"[routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
           <p>{{ post.excerpt }}</p>
           <div class="meta">
             <span>{{ post.readMinutes }} min read</span>
