@@ -10,12 +10,12 @@ tags:
 
 Welcome to my portfolio site.
 
-I'm **Phillip Raich**, a computer engineer based in Austin, Texas. This site is where I'll share notes on software engineering, reliability, and the tools I use day to day.
+I'm **Phillip Raich**, a computer engineer based in Austin, Texas. This site is where I'll share notes on my journey as an engineer and thoughts I have on technical advancments and news.
 
 ## What to expect
 
-- Short posts on **Angular**, **Java**, and **cloud** topics from real project work
-- Occasional write-ups on **testing**, **observability**, and **CI/CD**
-- A living **resume** you can print or share with recruiters
+- A living **resume** you can print or share with recruiters.
+- Stories from experience's I've had.
+- Breif write ups on projects I am working on.
 
 Thanks for stopping by — feel free to reach out via the [contact page](/contact).
