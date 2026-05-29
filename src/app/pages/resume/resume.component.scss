@@ -36,8 +36,8 @@
   display: grid;
   gap: 2rem;
 
-  @media (min-width: 800px) {
-    grid-template-columns: 10rem 1fr;
+  @media (min-width: 1000px) {
+    grid-template-columns:  1fr;
   }
 }
 
