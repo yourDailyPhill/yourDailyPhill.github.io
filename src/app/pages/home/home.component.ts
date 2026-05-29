@@ -1,6 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { SITE_URL } from '../../core/config/site-url';
 import { BlogService } from '../../core/services/blog.service';
 import { ResumeService } from '../../core/services/resume.service';
 import { SeoService } from '../../core/services/seo.service';
@@ -39,7 +40,7 @@ export class HomeComponent implements OnInit {
         name: resume.profile.name,
         title: resume.profile.title,
         email: resume.profile.email,
-        url: 'https://yourDailyPhill.github.io',
+        url: SITE_URL,
         sameAs,
       });
     });

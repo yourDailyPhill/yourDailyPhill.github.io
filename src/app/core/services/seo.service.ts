@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { SITE_URL } from '../config/site-url';
 
 export interface PageSeo {
   title: string;
@@ -14,7 +15,7 @@ export class SeoService {
   private readonly meta = inject(Meta);
   private readonly document = inject(DOCUMENT);
   private readonly siteName = 'Phillip Raich';
-  private readonly baseUrl = 'https://yourDailyPhill.github.io';
+  private readonly baseUrl = SITE_URL;
 
   setPage(seo: PageSeo): void {
     const fullTitle = seo.title === this.siteName ? seo.title : `${seo.title} | ${this.siteName}`;
