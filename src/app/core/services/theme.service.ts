@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
+
+import { Injectable, PLATFORM_ID, inject, signal, DOCUMENT } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 const STORAGE_KEY = 'theme';
