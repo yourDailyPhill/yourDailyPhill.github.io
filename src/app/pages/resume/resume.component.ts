@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { ResumeService } from '../../core/services/resume.service';
 import { SeoService } from '../../core/services/seo.service';
 import { formatDateRange, formatMonthYear } from '../../core/utils/date-format';
@@ -10,6 +10,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
   standalone: true,
   imports: [AsyncPipe, SectionHeadingComponent],
   templateUrl: './resume.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './resume.component.scss',
 })
 export class ResumeComponent implements OnInit {

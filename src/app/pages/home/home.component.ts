@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SITE_URL } from '../../core/config/site-url';
 import { BlogService } from '../../core/services/blog.service';
@@ -13,6 +13,7 @@ import { SectionHeadingComponent } from '../../shared/section-heading/section-he
   standalone: true,
   imports: [AsyncPipe, RouterLink, SectionHeadingComponent],
   templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './home.component.scss',
 })
 export class HomeComponent implements OnInit {

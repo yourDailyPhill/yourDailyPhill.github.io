@@ -1,5 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, ChangeDetectionStrategy } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map, switchMap } from 'rxjs';
@@ -12,6 +12,7 @@ import { formatPostDate } from '../../core/utils/date-format';
   standalone: true,
   imports: [AsyncPipe, RouterLink],
   templateUrl: './blog-post.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './blog-post.component.scss',
 })
 export class BlogPostComponent implements OnInit {
